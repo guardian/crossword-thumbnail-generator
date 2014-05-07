@@ -1,0 +1,2 @@
+
+GET         /crosswords/:type/:number    controllers.ThumbnailsController.crossword(type, number: Int)
