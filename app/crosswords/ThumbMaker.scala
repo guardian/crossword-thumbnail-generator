@@ -5,15 +5,13 @@ import java.awt.Color
 import lib._
 
 object ThumbMaker {
-  val CellSize = 20
-  val BorderSize = 1
   val BackgroundColour = Color.black
   val ForegroundColour = Color.white
 
   /** Draws the grid as a black and white image */
-  def draw(grid: Grid) = {
-    val width = grid.cols * (CellSize + BorderSize) + BorderSize
-    val height = grid.rows * (CellSize + BorderSize) + BorderSize
+  def draw(grid: Grid, cellSize: Int, borderSize: Int) = {
+    val width = grid.cols * (cellSize + borderSize) + borderSize
+    val height = grid.rows * (cellSize + borderSize) + borderSize
 
     /** As it's only going to be black & white anyway, gray scale should be fine */
     val image = new BufferedImage(width, height, BufferedImage.TYPE_BYTE_GRAY)
@@ -30,10 +28,10 @@ object ThumbMaker {
       col <- 0 until grid.cols;
       row <- 0 until grid.rows if grid.get(col, row) == White
     ) {
-      val x = col * (CellSize + BorderSize) + BorderSize
-      val y = row * (CellSize + BorderSize) + BorderSize
+      val x = col * (cellSize + borderSize) + borderSize
+      val y = row * (cellSize + borderSize) + borderSize
 
-      graphics.fillRect(x, y, CellSize, CellSize)
+      graphics.fillRect(x, y, cellSize, cellSize)
     }
 
     image.toPngBytes
