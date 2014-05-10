@@ -1,0 +1,27 @@
+@(crosswords: List[CrosswordInfo])
+
+<html>
+    <head>
+        <title>Crossword thumbnails API</title>
+
+        <style>
+            h1, h2 {
+                font-family: Arial, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Crossword thumbnails API</h1>
+
+        <h2>Today's crosswords</h2>
+
+        @for(crossword <- crosswords) {
+            <div class="crossword">
+                <p>@crossword.name</p>
+
+                <img src="@crossword.uri" />
+            </div>
+        }
+    </body>
+</html>

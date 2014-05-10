@@ -1,2 +1,5 @@
 
-GET         /crosswords/:type/:number    controllers.ThumbnailsController.crossword(type, number: Int, cellSize: Int ?= 20, borderSize: Int ?= 1)
+GET        /                            controllers.ThumbnailsController.index
+
+
+GET        /crosswords/:type/:number    controllers.ThumbnailsController.crossword(type, number: Int, cellSize: Int ?= 20, borderSize: Int ?= 1)
