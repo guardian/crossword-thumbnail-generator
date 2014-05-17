@@ -5,5 +5,5 @@ object Dependencies {
 
   val specs2 = "org.specs2" %% "specs2" % "2.2.3"
 
-  val crosswordsApiClient = "com.theguardian" %% "crosswords-api-client" % "0.3-SNAPSHOT" changing()
+  val crosswordsApiClient = "com.gu" %% "crosswords-api-client" % "0.4"
 }

@@ -1,6 +1,6 @@
 package data
 
-import com.theguardian.crosswords.api.client.{Response, Http, ApiClient}
+import com.gu.crosswords.api.client.{Response, Http, ApiClient}
 import conf.CrosswordThumbnailGeneratorConfig
 import scala.concurrent.Future
 import play.api.libs.ws.WS

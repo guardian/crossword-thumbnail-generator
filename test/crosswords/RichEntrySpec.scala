@@ -1,7 +1,7 @@
 package crosswords
 
 import org.specs2.mutable.Specification
-import com.theguardian.crosswords.api.client.models._
+import com.gu.crosswords.api.client.models._
 
 class RichEntrySpec extends Specification {
   "coordinates" should {

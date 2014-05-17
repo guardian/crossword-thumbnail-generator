@@ -1,6 +1,6 @@
 package crosswords
 
-import com.theguardian.crosswords.api.client.models._
+import com.gu.crosswords.api.client.models._
 
 object Grid {
   def empty(cols: Int, rows: Int) = Grid(cols, rows, Map.empty)

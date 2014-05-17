@@ -1,4 +1,4 @@
-import com.theguardian.crosswords.api.client.models.{Down, Across, Position, Entry}
+import com.gu.crosswords.api.client.models.{Down, Across, Position, Entry}
 
 package object crosswords {
   implicit class RichEntry(entry: Entry) {

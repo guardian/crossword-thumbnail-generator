@@ -3,7 +3,7 @@ package controllers
 import play.api.mvc.{Action, Controller}
 import scala.concurrent.Future
 import data.CrosswordsApi
-import com.theguardian.crosswords.api.client.models.Type
+import com.gu.crosswords.api.client.models.Type
 import crosswords.{ThumbMaker, Grid}
 import scala.concurrent.ExecutionContext.Implicits.global
 
