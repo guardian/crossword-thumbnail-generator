@@ -37,8 +37,6 @@ object CrosswordThumbnailGeneratorBuild extends Build {
     resolvers += "Guardian GitHub Releases" at "http://guardian.github.com/maven/repo-releases",
     libraryDependencies ++= Seq(
       clapper,
-      guardianManagementPlay,
-      guardianConfiguration,
       crosswordsApiClient,
       specs2
     )

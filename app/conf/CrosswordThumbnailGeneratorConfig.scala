@@ -1,10 +1,9 @@
 package conf
 
-import com.gu.conf.ConfigurationFactory
+import play.api.Play.current
 
 object CrosswordThumbnailGeneratorConfig {
-  private val conf = ConfigurationFactory.getConfiguration("crossword-thumbnail-generator")
+  val config = current.configuration
 
-  lazy val apiKey = conf.getRequiredStringProperty("crosswords_api.key")
-
+  lazy val apiKey = config.getRequiredStringProperty("crosswords_api.key")
 }
