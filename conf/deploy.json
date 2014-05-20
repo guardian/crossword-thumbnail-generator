@@ -1,0 +1,26 @@
+{
+    "packages" : {
+        "crossword-thumbnail-generator" : {
+            "type" : "autoscaling",
+            "apps" : [ "mobile::crossword-thumbnail-generator" ],
+            "data" : {
+                "secondsToWait": 500,
+                "port" : 9000,
+                "bucket" : "mobile-apps-api-dist",
+                "healthcheckGrace": 20,
+                "healthcheck_paths" : [ "/healthcheck" ]
+            }
+        }
+    },
+    "recipes" : {
+        "default" : {
+            "depends" : ["artifactUpload", "deploy"]
+        },
+        "deploy": {
+            "actionsBeforeApp": ["crossword-thumbnail-generator.deploy"]
+        },
+        "artifactUpload": {
+            "actionsBeforeApp": ["crossword-thumbnail-generator.uploadArtifacts"]
+        }
+    }
+}
